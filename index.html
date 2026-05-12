@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Inter:wght@400;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#4d4635",
+                        "secondary-fixed": "#f0e0cc",
+                        "inverse-surface": "#362f2a",
+                        "surface-container-low": "#fef1e9",
+                        "surface-container-high": "#f2e6dd",
+                        "primary": "#735c00",
+                        "surface-variant": "#ece0d8",
+                        "on-tertiary-container": "#444542",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#221a0e",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#f8ece3",
+                        "on-primary-fixed-variant": "#574500",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#5d5f5b",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-secondary-container": "#6e6353",
+                        "primary-container": "#d4af37",
+                        "on-primary-container": "#554300",
+                        "surface-tint": "#735c00",
+                        "tertiary-fixed-dim": "#c6c7c2",
+                        "secondary-container": "#f0e0cc",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#e3e3de",
+                        "on-error-container": "#93000a",
+                        "surface": "#fff8f5",
+                        "on-surface": "#201b15",
+                        "primary-fixed": "#ffe088",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#4f4537",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#201b15",
+                        "inverse-on-surface": "#fbeee6",
+                        "background": "#fff8f5",
+                        "inverse-primary": "#e9c349",
+                        "on-primary-fixed": "#241a00",
+                        "outline-variant": "#d0c5af",
+                        "secondary": "#675d4d",
+                        "surface-dim": "#e4d8cf",
+                        "outline": "#7f7663",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#d3c4b1",
+                        "tertiary-container": "#b2b3af",
+                        "on-tertiary-fixed": "#1a1c19",
+                        "surface-container-highest": "#ece0d8",
+                        "on-tertiary-fixed-variant": "#454744",
+                        "surface-bright": "#fff8f5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "container-max": "1200px",
+                        "unit": "8px",
+                        "section-gap": "128px",
+                        "gutter": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Noto Serif"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Noto Serif"],
+                        "headline-lg": ["Noto Serif"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .luxury-shadow {
+            box-shadow: 0 10px 30px -15px rgba(115, 92, 0, 0.08);
+        }
+
+        .text-balanced {
+            text-wrap: balance;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- TopNavBar -->
+    <header
+        class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-8 bg-transparent backdrop-blur-md">
+        <div class="flex-1 hidden md:flex gap-8 items-center">
+            <nav class="flex gap-8">
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    href="collection.html">New Collection</a>
+                <a class="font-label-sm text-label-sm text-primary dark:text-primary-fixed-dim border-b border-primary/20 pb-1 hover:text-primary transition-colors duration-300"
+                    href="#">Shop</a>
+               
+            </nav>
+        </div>
+        <div class="flex-none">
+            <h1 class="font-display-lg text-headline-md tracking-widest text-on-surface">NOIRVA</h1>
+        </div>
+        <div class="flex-1 flex justify-end items-center gap-6">
+            <a class="hidden md:block font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-300"
+                href="about.html">About</a>
+            <a class="hidden md:block font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-300"
+                href="contact.html">Contact</a>
+            <button class="text-on-surface flex items-center justify-center p-2">
+                <span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+            </button>
+            <button class="md:hidden text-on-surface p-2">
+                <span class="material-symbols-outlined" data-icon="menu">menu</span>
+            </button>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img class="w-full h-full object-cover"
+                data-alt="A cinematic full-length shot of an elegant female model wearing a flowing silk champagne-colored gown. She is standing in a minimalist architectural space bathed in soft, warm natural sunlight. The atmosphere is serene and high-fashion editorial, with a color palette of ivory, cream, and subtle gold tones. The lighting creates gentle shadows on her face and the silk fabric, emphasizing a luxurious and tranquil mood."
+                src="noimages/home1.png" />
+            <div class="absolute inset-0 bg-black/5"></div>
+        </div>
+        <div class="relative z-10 text-center px-margin-mobile">
+            <span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface mb-4 block">Summer
+                2024</span>
+            <h2 class="font-display-lg text-display-lg text-on-surface mb-8 max-w-4xl mx-auto leading-tight">Elegance in
+                Every Detail.</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                <a class="bg-primary text-on-primary font-label-sm text-label-sm px-10 py-4 uppercase tracking-widest hover:bg-on-primary-container transition-all duration-300 luxury-shadow"
+                    href="#">Explore Collection</a>
+                <a class="border border-outline font-label-sm text-label-sm px-10 py-4 uppercase tracking-widest hover:bg-surface-container transition-all duration-300"
+                    href="#">Shop Now</a>
+            </div>
+        </div>
+    </section>
+    <main>
+        <!-- New Collections (Bento Grid Style) -->
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface">
+            <div class="text-center mb-16">
+                <h3 class="font-headline-lg text-headline-lg text-on-surface mb-4">The New Season</h3>
+                <p class="font-body-md text-on-surface-variant max-w-lg mx-auto">Discover our latest curation of
+                    silhouettes designed for the modern woman.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-gutter h-auto md:h-[800px]">
+                <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden bg-surface-container">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        data-alt="High-end editorial fashion photography of a sophisticated woman in a minimalist white linen dress standing in a sunlit atrium. The scene features architectural clean lines and soft cream tones, reflecting a peaceful luxury aesthetic. The lighting is bright and diffuse, highlighting the natural texture of the fabric."
+                        src="noimages/home2.png" />
+                    <div class="absolute bottom-8 left-8">
+                        <h4 class="font-headline-md text-headline-md text-on-surface mb-2">Dresses</h4>
+                        <a class="font-label-sm text-label-sm uppercase border-b border-primary/40 pb-1" href="#">View
+                            Collection</a>
+                    </div>
+                </div>
+                <div class="md:col-span-2 md:row-span-1 relative group overflow-hidden bg-surface-container">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        data-alt="Close up of a luxury silk blouse in a warm sand color, worn by a model in a softly lit studio setting. The image captures the exquisite sheen and drape of the high-quality fabric against a tonal beige background. The overall aesthetic is one of quiet luxury and impeccable craftsmanship."
+                        src="noimages/3.png" />
+                    <div class="absolute bottom-8 left-8">
+                        <h4 class="font-headline-md text-headline-md text-on-surface mb-2">Luxury Tops</h4>
+                        <a class="font-label-sm text-label-sm uppercase border-b border-primary/40 pb-1" href="#">View
+                            Collection</a>
+                    </div>
+                </div>
+                <div class="md:col-span-1 md:row-span-1 relative group overflow-hidden bg-surface-container">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        data-alt="Fashion portrait of a co-ord set in a soft charcoal grey, presented in a minimalist gallery environment. The lighting is directional but soft, creating an editorial look that emphasizes the clean silhouette and modern tailoring of the garment. The mood is calm and professional."
+                        src="noimages/home4.png" />
+                    <div class="absolute bottom-6 left-6">
+                        <h4 class="font-label-sm text-label-sm font-bold uppercase text-on-surface mb-1">Co-ord Sets
+                        </h4>
+                    </div>
+                </div>
+                <div class="md:col-span-1 md:row-span-1 relative group overflow-hidden bg-surface-container">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        data-alt="Still life fashion photograph of an ivory cashmere sweater draped over a minimalist chair in a bright, airy room. The color palette is composed of various shades of white and cream, accented by soft gold sunlight. The visual style is focused on comfort, luxury, and visual silence."
+                        src="noimages/home5.png" />
+                    <div class="absolute bottom-6 left-6">
+                        <h4 class="font-label-sm text-label-sm font-bold uppercase text-on-surface mb-1">Essentials</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Brand Story -->
+        <section class="py-section-gap bg-surface-container-low px-margin-mobile md:px-margin-desktop overflow-hidden">
+            <div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-1/2">
+                    <img class="w-full aspect-[4/5] object-cover"
+                        data-alt="Editorial portrait of a woman looking thoughtfully away, lit by soft afternoon light through a window. She is wearing a minimal champagne-colored silk shirt. The setting is a bright, upscale atelier with soft tonal colors and clean lines, embodying the brand's philosophy of confidence and timeless style."
+                        src="noimages/home6.png" />
+                </div>
+                <div class="w-full md:w-1/2 space-y-8">
+                    <h3 class="font-display-lg text-headline-lg leading-tight">Designed for women who carry confidence,
+                        elegance, and timeless style.</h3>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">NOIRVA was born from a
+                        desire to redefine luxury through the lens of minimalism. Every piece in our collection is a
+                        testament to the beauty of restrained design, focused on superior fabrics and impeccable
+                        silhouettes that transcend seasons.</p>
+                    <a class="inline-block border-b-2 border-primary pb-1 font-label-sm text-label-sm uppercase tracking-widest hover:text-primary transition-colors"
+                        href="#">Our Philosophy</a>
+                </div>
+            </div>
+        </section>
+        <!-- Bestsellers Section -->
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h3 class="font-headline-lg text-headline-lg text-on-surface">The Icons</h3>
+                    <p class="font-body-md text-on-surface-variant">Our most coveted pieces of the season.</p>
+                </div>
+                <a class="hidden md:block font-label-sm text-label-sm uppercase tracking-widest border-b border-outline pb-1"
+                    href="#">Shop All Bestsellers</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <!-- Product Card 1 -->
+                <div class="space-y-6 group">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-surface-container-high">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            data-alt="A luxurious silk slip dress in deep amber, draped on a minimal model against a soft beige background. Studio lighting is soft and warm, highlighting the fabric's premium texture. The overall composition is clean and centered, typical of high-end fashion catalogs."
+                            src="noimages/home7.png" />
+                        <span
+                            class="absolute top-4 left-4 bg-surface/80 backdrop-blur-sm px-3 py-1 font-label-sm text-[10px] uppercase tracking-tighter">Bestseller</span>
+                    </div>
+                    <div class="space-y-2">
+                        <h5 class="font-headline-md text-[20px] text-on-surface">Amber Silk Slip Dress</h5>
+                        <p class="font-label-sm text-label-sm text-on-surface-variant">$280.00</p>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="space-y-6 group">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-surface-container-high">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            data-alt="A woman wearing a perfectly tailored cream-colored blazer and matching trousers. The setting is a minimalist white stone courtyard with sharp architectural shadows. The visual style is premium and editorial, emphasizing the structured but soft silhouette of the tailoring."
+                            src="noimages/home8.png" />
+                    </div>
+                    <div class="space-y-2">
+                        <h5 class="font-headline-md text-[20px] text-on-surface">Structured Ivory Blazer</h5>
+                        <p class="font-label-sm text-label-sm text-on-surface-variant">$450.00</p>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="space-y-6 group">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-surface-container-high">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            data-alt="Portrait of a model wearing a luxurious high-neck cashmere sweater in a soft sand tone. She is posed in a warm, minimalist interior with wooden accents and soft lighting. The image emphasizes the soft texture and high-quality knit of the garment."
+                            src="noimages/home9.png" />
+                    </div>
+                    <div class="space-y-2">
+                        <h5 class="font-headline-md text-[20px] text-on-surface">Sand Cashmere Knit</h5>
+                        <p class="font-label-sm text-label-sm text-on-surface-variant">$320.00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Lookbook Section (Asymmetrical Magazine Layout) -->
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-highest">
+            <div class="flex flex-col md:flex-row gap-12 items-center mb-16">
+                <div class="md:w-1/3">
+                    <span
+                        class="font-label-sm text-label-sm uppercase tracking-[0.3em] text-primary mb-4 block">Lookbook
+                        04</span>
+                    <h3 class="font-display-lg text-headline-lg leading-tight mb-6">A Study in Silence</h3>
+                    <p class="font-body-md text-on-surface-variant mb-8">Our latest visual essay explores the
+                        intersection of movement and tranquility, captured in the heart of Paris.</p>
+                </div>
+                <div class="md:w-2/3 grid grid-cols-12 gap-gutter relative">
+                    <div class="col-span-8 overflow-hidden luxury-shadow z-10 translate-y-8">
+                        <img class="w-full aspect-video object-cover"
+                            data-alt="High-fashion photography showing a model walking through a historic Parisian street in the early morning. She wears a long, elegant charcoal wool coat. The light is cool and ethereal, creating a romantic and high-end atmosphere. The composition uses street perspective to create depth."
+                            src="noimages/home10.png" />
+                    </div>
+                    <div class="col-span-6 col-start-6 overflow-hidden luxury-shadow -translate-y-12">
+                        <img class="w-full aspect-square object-cover"
+                            data-alt="Extreme close up of luxury leather accessories on a marble table. The image shows a minimalist handbag and gloves in soft tan leather. The lighting is bright and clear, highlighting the fine stitching and premium grain of the leather in a high-fashion editorial style."
+                            src="noimages/home11.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="text-right">
+                <a class="font-label-sm text-label-sm uppercase border-b-2 border-primary pb-2 hover:opacity-70 transition-opacity"
+                    href="#">Explore the Full Lookbook</a>
+            </div>
+        </section>
+        <!-- Testimonials -->
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop">
+            <div class="max-w-4xl mx-auto space-y-12">
+                <div class="text-center">
+                    <span class="material-symbols-outlined text-primary text-4xl"
+                        data-icon="format_quote">format_quote</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="p-12 bg-surface-container-low luxury-shadow">
+                        <p class="font-body-lg text-body-lg text-on-surface italic mb-8">"NOIRVA pieces feel like a
+                            second skin. The quality of the silk is unmatched, and I always feel an effortless sense of
+                            confidence when I wear them."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-surface-variant"></div>
+                            <div>
+                                <h6 class="font-label-sm text-label-sm uppercase">Elena Rostova</h6>
+                                <p class="text-[10px] uppercase text-on-surface-variant">Fashion Consultant</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-12 bg-surface-container-low luxury-shadow mt-12">
+                        <p class="font-body-lg text-body-lg text-on-surface italic mb-8">"The attention to detail in the
+                            tailoring of my ivory blazer is exquisite. It’s a timeless investment piece that I will
+                            cherish for years."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-surface-variant"></div>
+                            <div>
+                                <h6 class="font-label-sm text-label-sm uppercase">Sarah J. Miller</h6>
+                                <p class="text-[10px] uppercase text-on-surface-variant">Creative Director</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="w-full px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col items-center space-y-gutter bg-surface-container-low">
+        <h2 class="font-display-lg text-headline-sm text-on-surface tracking-widest">NOIRVA</h2>
+        <nav class="flex flex-wrap justify-center gap-x-12 gap-y-4">
+            <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-300 uppercase"
+                href="#">Privacy Policy</a>
+            <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-300 uppercase"
+                href="#">Terms of Service</a>
+            <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-300 uppercase"
+                href="#">Shipping &amp; Returns</a>
+            <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-300 uppercase"
+                href="#">Instagram</a>
+        </nav>
+        <div class="w-24 h-px bg-outline-variant"></div>
+        <p class="font-body-md text-body-md text-on-surface-variant opacity-70">© 2024 NOIRVA. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
